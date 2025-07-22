@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: telegram-bot-shop
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 30000
+      max-lifetime: 1800000
+      connection-timeout: 30000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        show_sql: true
+bot:
+  name: telegram-bot-shop-maxima_bot
+  token: 7692420832:AAEOyFhMPpxbXKQ8ZHkQvN0Pxq3izvVWPQY
